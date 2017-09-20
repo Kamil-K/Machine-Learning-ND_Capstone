@@ -373,11 +373,11 @@ IMAGES HERE
  
  **Approach 1 - SVM based on HOG features:**
  
-<p>![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/SVM_final.png "SVM Final") 
+![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/SVM_final.png "SVM Final") 
  
  **Approach 2 - Transfer Learning applied on AlexNet CNN:**
  
- <p>![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/CNN_final.png "CNN Final") 
+ ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/CNN_final.png "CNN Final") 
  
 The visualisations above represent the qualitative analysis results, they help to understand the robustness and sensitivity analysis as well as the precision and recall for both models for classes of aircraft and birds. The full description of these phenomenons is included in the above sections as they correspond to these visualisations.
 
