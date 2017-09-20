@@ -72,14 +72,10 @@ Dataset used for this project consists of pictures downloaded from the popular w
 - ground images containing a mix of various pictures from flight of cities, fields, mountains and other landscapes where most of the image area is covered by ground so that it does not contain a lot of sky in it - 407 images
 
 Examples of each class can be seen here:
-- aircraft
-![alt text](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/dataset_examples/aircraft/0_.jpg "Aircraft")
-- bird
-![alt text](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/dataset_examples/birds/0_.jpg "Bird")
-- sky
-![alt text](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/dataset_examples/sky/0_.jpg "Sky")
-- ground
-![alt text](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/dataset_examples/ground/0_.jpg "Ground")
+- ![Aircraft](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/aircraft/0_.jpg "Aircraft")
+- ![Bird](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/birds/0_.jpg "Bird")
+- ![Sky](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/sky/0_.jpg "Sky")
+- ![Ground](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/ground/0_.jpg "Ground")
 
 **Step 1 - Aspect Ratios Investigations & Conversion**
 For each class a simple check was performed to inspect the basic characteristics of aspect ratios of images as this information is going to be relevant for the future steps of processing.
