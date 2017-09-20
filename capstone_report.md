@@ -265,33 +265,9 @@ Final models are both quite reasonable in terms of aligning with solution expect
 
 The results for the SVM approach 1 are reasonable with close to 90% of accurate classification, however the results of the CNN approach vastly outperform the SVM model with over 99% of accurate classification of images.
 
-Having performed additional qualitative analysis on the datasets of the internet (20 images) proves the extra robustness of the model to the new unseen data and to the abilitiy of both models to generalize well enough. Most of the classifications are correct with the following qualitative analysis:
+Having performed additional qualitative analysis on the datasets of the internet (20 images) proves the extra robustness of the model to the new unseen data and to the abilitiy of both models to generalize well enough. Most of the classifications are correct with the following results:
 
-
-**Apprach 2**
-
-|                          |  Aircraft (actual) | Non-Aircraft (actual) |
-|--------------------------|--------------------|-----------------------|
-|   Aircraft (predicted)   |     11             |      0                |
-| Non-Aircraft (predicted) |     0              |      X                |
-
-|                          |  Bird (actual)     | Non-Bird (actual)     |
-|--------------------------|--------------------|-----------------------|
-|   Bird (predicted)       |     3              |      1                |
-| Non-Bird (predicted)     |     3              |      X                |
-
-|              |  Aircraft (actual) | Bird (actual) | Non-Aircraft & Non-Bird (actual) |
-|--------------|--------------------|-----------------------|--------------------------|
-|   Aircraft (predicted)   |     11     |      0       |      0       |
-| Bird (predicted) |     0      |      3       |      1       |
-| Non-Aircraft & Non-Bird (predicted) |     0      |      3       |      X       |
-
-|                          |  Aircraft          | Bird                  |
-|--------------------------|--------------------|-----------------------|
-|   Precision              |     1              |      0,75             |
-| Recall                   |     1              |      0,5              |
-
-**Apprach 1**
+**Apprach 1 w/ SVM - Final Results on Extra Test Images **
 
 |                          |  Aircraft (actual) | Non-Aircraft (actual) |
 |--------------------------|--------------------|-----------------------|
@@ -309,34 +285,28 @@ Having performed additional qualitative analysis on the datasets of the internet
 | Bird (predicted) |     2      |      3       |      2       |
 | Non-Aircraft & Non-Bird (predicted) |     4      |      3       |      X       |
 
-|                          |  Aircraft          | Bird                  |
+**Apprach 2 w/ CNN - Final Results on Extra Test Images**
+
+|                          |  Aircraft (actual) | Non-Aircraft (actual) |
 |--------------------------|--------------------|-----------------------|
-|   Precision              |     0,47           |      0,43             |
-| Recall                   |     0,64           |      0,5              |
+|   Aircraft (predicted)   |     11             |      0                |
+| Non-Aircraft (predicted) |     0              |      X                |
 
-Approach 2:
- - Aircraft
-	- TP
-	- FP
-	- TN
-	- FN
+|                          |  Bird (actual)     | Non-Bird (actual)     |
+|--------------------------|--------------------|-----------------------|
+|   Bird (predicted)       |     3              |      1                |
+| Non-Bird (predicted)     |     3              |      X                |
 
-- Approach 2 based on AlexNet and Transfer Learning (after postprocessing of heatmaps!):
-	- 10/10 - aircraft correct classification on internet test images 
-		- 10/10 - aircraft correct selection of bounding boxes around each aircraft
-		- Precision and Recall scores:......
-	- 3/5 - birds correct classification on internet test images ()
-		- 1 false detection
+|              |  Aircraft (actual) | Bird (actual) | Non-Aircraft & Non-Bird (actual) |
+|--------------|--------------------|-----------------------|--------------------------|
+|   Aircraft (predicted)   |     11     |      0       |      0       |
+| Bird (predicted) |     0      |      3       |      1       |
+| Non-Aircraft & Non-Bird (predicted) |     0      |      3       |      X       |
 		
-
-PICTURES HERE
 
 Using these test images various hyper-parameters were tested of sliding windows, overlaps, different SVM features hyperparameters and general observations were found to be quite similar for both models:
 - in general if an image contains clear sky and a small countour or texture feature element the it is often classified as a bird. Example of that was seen few times in the test images of the internet analysis. In reality this looks that if very often sky image itself with a small dark distinct feature can be misclassified as a bird. This looks that a bird class is too close to the sky class in terms of semantic content of the image itself and especially given the fact that a bird does not fill in enough of the frame of the image. This is true to both models. For the future an extra processing step should be considered for the purposes of creating a more appropriate dataset where either a boundary of a training image would be tighly sorrounding birds in images or perhaps some kind of image segmentation should be applied to discard this effect. In this work extra processing layer was added with thresholding a heatmap but this is not a machine learning solution but a rather computer vision based. Models themselves however seem to be working find and it is probably a lack of appropriate dataset for birds class and too close classes between birds and sky.
 - another shortcoming of both models after qualitative analysis is the fact that if an aircraft appeared small in an image and it was relatively difficult to see its distinct features such as engines, landing gear or texture the model would often classify it as a bird. This is probably especially true due to the fact that birds dataset often contained images of birds not filling the full frame of the image hence the CNN learned that if there is a relatively small object on a sky background then it is probably a bird. This problem is only partially fixed in the CNN pipeline by prioritizing labelling of objects based on the heatmaps and hence if an aircraft and a bird is detected on the same part of an image only aircraft should be marked with a bounding box. This is however a workaround and an appropriate solution should be considered with improved dataset of images or perhaps also using the actual probabilities of each object classificaiton.
-
-
-SNAPSHOT OF A VIDEO HERE
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Approach 2 Transfer learning model based on AlexNet was selected and derived due to its state-of-the performance capabilities for object classification and the possibility of re-using the pre-learned model weights and just finetunning it on a relatively small subset of data for new object classes classification.
 
@@ -364,13 +334,19 @@ The models results - accuracies are:
 - 0.8805 for the Support Vector Machines based on Histogram of Orientation Gradients features
 - 0.9916 for the Convolutional Neural Networks based on AlexNet and Transfer Learning from ImageNet dataset
 
-**Approach 2 - Transfer Learning applied on AlexNet CNN:**
-- Aircraft - __*Precision: 1 and Recall: 1*__
-- Birds - __*Precision 0.75 and Recall: 0.5*__
-
 **Approach 1 - SVM based on HOG features:**
-- Aircraft - __*Precision: 0.47 and Recall: 0.64*__
-- Birds - __*Precision 0.43 and Recall: 0.5*__
+
+|                          |  Aircraft          | Bird                  |
+|--------------------------|--------------------|-----------------------|
+|   Precision              |     0,47           |      0,43             |
+| Recall                   |     0,64           |      0,5              |
+
+**Approach 2 - Transfer Learning applied on AlexNet CNN:**
+
+|                          |  Aircraft          | Bird                  |
+|--------------------------|--------------------|-----------------------|
+|   Precision              |     1              |      0,75             |
+| Recall                   |     1              |      0,5              |
 
 The final results indicate that the initial model with approach 1 underperforms compared to model 2 in terms of Precision and Recall results. The main differences are:
 - for aircraft model 2 has much higher precision and recall than model 1
@@ -395,6 +371,13 @@ IMAGES HERE
  MODEL 1
  Model 2
  
+ **Approach 1 - SVM based on HOG features:**
+ 
+<p>![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/SVM_final.png "SVM Final") 
+ 
+ **Approach 2 - Transfer Learning applied on AlexNet CNN:**
+ 
+ <p>![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/CNN_final.png "CNN Final") 
  
 The visualisations above represent the qualitative analysis results, they help to understand the robustness and sensitivity analysis as well as the precision and recall for both models for classes of aircraft and birds. The full description of these phenomenons is included in the above sections as they correspond to these visualisations.
 
