@@ -270,12 +270,11 @@ Having performed additional qualitative analysis on the datasets of the internet
 
 **Apprach 2**
 
-|           |              |      Actual|Class         |
-|-----------|--------------|------------|--------------|
-|           |   Classes    |  Aircraft  | Non-Aircraft |
-|-----------|--------------|------------|--------------|
-| Predicted |   Aircraft   |     11     |      0       |
-|   Class   | Non-Aircraft |     0      |      X       |
+
+|           |   Classes    |  Aircraft (actual) | Non-Aircraft (actual) |
+|-----------|--------------|--------------------|-----------------------|
+| Predicted |   Aircraft (predicted)   |     11     |      0       |
+|   Class   | Non-Aircraft (predicted) |     0      |      X       |
 
 
 Approach 2:
