@@ -26,7 +26,7 @@ It is divided into three chapters:
 
 ### Pre-requisite files
 
-It is required for the Chapter 3 work for Transfer Learning to use pre-trained model weights which can be accessed [here](https://github.com/samjabrahams/tensorflow-workshop).
+It is required for the Chapter 3 work for Transfer Learning to use pre-trained model weights which can be accessed [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580d880c_bvlc-alexnet/bvlc-alexnet.npy)
 
 ### Dataset:
 
