@@ -72,13 +72,13 @@ Dataset used for this project consists of pictures downloaded from the popular w
 - ground images containing a mix of various pictures from flight of cities, fields, mountains and other landscapes where most of the image area is covered by ground so that it does not contain a lot of sky in it - 407 images
 
 Examples of each class can be seen here:
-- Aircraft
+- Aircraft <p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/aircraft/0_.jpg "Aircraft")
-- Bird
+- Bird <p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/birds/0_.jpg "Bird")
-- Sky
+- Sky <p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/sky/0_.jpg "Sky")
-- Ground
+- Ground <p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/ground/0_.jpg "Ground")
 
 **Step 1 - Aspect Ratios Investigations & Conversion**
