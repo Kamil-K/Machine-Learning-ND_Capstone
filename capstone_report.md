@@ -3,7 +3,8 @@
 Kamil Kaczmarczyk
 September 10th, 2017
 
-## Vision-Perception Module - Situational Awareness System for Autonomous Vehicles
+## Vision-Perception Module
+## Situational Awareness System for Autonomous Vehicles
 
 ## I. Definition
 
