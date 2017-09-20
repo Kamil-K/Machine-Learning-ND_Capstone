@@ -210,7 +210,7 @@ __*Step 4:*__ Assign Label values to each dataset image<p>
 __*Step 5:*__ Split data into training and test dataset with test set being 10% of the overall dataset.<p>
 __*Step 6:*__ Pring out the output, accuracy<p>
 
-Optional Steps for manual qualitative check:
+Optional Steps for manual qualitative check:<p>
 __*Step 7:*__ Design a sliding window functionality that will move windows at different scales and overlaps over larger images looking for smaller objects such as a small bird in a much bigger picture.<p>
 __*Step 8:*__ After running on test images the sliding windows and classifying each one of them into one of the 4 classes (aircraft, birds, sky, ground) create a heatmap for aircraft class and birds class for each test image.<p>
 __*Step 9:*__ Apply thresholds on heatmaps to cut down their values to lower the false alerts and unstabilities of the algorithm.<p>
@@ -268,6 +268,15 @@ The results for the SVM approach 1 are reasonable with close to 90% of accurate 
 Having performed additional qualitative analysis on the datasets of the internet (20 images) proves the extra robustness of the model to the new unseen data and to the abilitiy of both models to generalize well enough. Most of the classifications are correct with the following qualitative analysis:
 
 
+**Apprach 2**
+
+|           |              |      Actual Class         |
+|           |   Classes    |  Aircraft  | Non-Aircraft |
+|:---------:|:------------:|:----------:|:------------:|
+| Predicted |   Aircraft   |     11     |      0       |
+|   Class   | Non-Aircraft |     0      |      X       |
+
+
 Approach 2:
  - Aircraft
 	- TP
@@ -295,8 +304,8 @@ SNAPSHOT OF A VIDEO HERE
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Approach 2 Transfer learning model based on AlexNet was selected and derived due to its state-of-the performance capabilities for object classification and the possibility of re-using the pre-learned model weights and just finetunning it on a relatively small subset of data for new object classes classification.
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to test robustness and sensitivity of the model for AlexNet Transfer Learning approach there were 20 images downloaded from internet containing each of four classes in total but with some alterations as to test the robustness. Some alterations were that the objects were relatively small in the frame of an image or that they were not positioned in the center, sometimes there were few objects of the same class such as aircraft of birds in one image and in one case they were of different scales in differnt parts of the picture.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Just classifying an entire image here with the CNN model would probably not be a good idea so a post processing pipeline was added to scan image via sliding windows at different scales and creating a heatmap of different classes detections. Later on that heatmap was a subject to applying a threshold and then bounding boxes.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The final results of precision and recall show the strengths of the model as well as some of its weakenesses.
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Just classifying an entire image here with the CNN model would probably not be a good idea so a post processing pipeline was added to scan image via sliding windows at different scales and creating a heatmap of different classes detections. Later on that heatmap was a subject to applying a threshold and then bounding boxes.
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The final results of precision and recall show the strengths of the model as well as some of its weakenesses.
 
 **Strengths:**
 - very strong classification of aircraft in images when they are of not very small size (Precision: 1 and Recall: 1)
@@ -356,7 +365,7 @@ The visualisations above represent the qualitative analysis results, they help t
 
 **Summary and end-to-end description:**
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The problem that this capstone project addresses is detection and classification of objects from camera images during flight for autonomous flying vehicle that could potentially be hazardous to the safety of its flight. Dataset of around 400 images was gathered of the internet for each of the classes of aircraft, bird, sky and ground. These images were later on used for training of two models of which one served as a benchmark for the final soltion. 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first approach was based on the Support Vector Machines with features extracted from the images using Histograms of Oriented Gradients algorithms. The second approach focused on re-using of pretrained model on ImageNet dataset using so-called AlexNet based on Convolutional Neural Networks and then adding an extra layer to the network and retraining the model just on the gathered dataset for the new classes. 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first approach was based on the Support Vector Machines with features extracted from the images using Histograms of Oriented Gradients algorithms. The second approach focused on re-using of pretrained model on ImageNet dataset using so-called AlexNet based on Convolutional Neural Networks and then adding an extra layer to the network and retraining the model just on the gathered dataset for the new classes. 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Both of the models then gave their accuracies of around 88% for the SVM and around 99% for the transfer learning approach with CNN on the test images randomly taken from the collected dataset. The final results show superior performance on the test images of the CNN model with almost all correct classifications.
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However to allow for an additional analysis there were 20 images collected from the internet containing all classes, with some tweaked examples such as few objects in one image or different scales of objects. In order to deal with additional complexity of the images a pipeline was designed that uses a sliding windows approach at different scale to classify parts of the image into one of the four classes. Then the detections create heatmaps for each of the class and some filtering and thresholding is applied on the heatmaps to clean up the classifications but also to create bounding boxes to localize images within the image frame.
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Final analysis of the additional images showed the results for the second model outperformed the benchmark as well but indicated few weakenesses of the solution too. If aircraft are small within the frame and its distinct features are not distinguishable then it can get misclassified as a bird and also sky was sometimes classified as a bird due to high amount of sky backgrounds in the birds' images training set. After applying the pipeline the aircraft results were precision 1 and recall 1 and for birds it was precision 0.75 and recall 0.5 which is still satisfactory but not perfect.
