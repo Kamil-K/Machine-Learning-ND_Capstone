@@ -270,12 +270,49 @@ Having performed additional qualitative analysis on the datasets of the internet
 
 **Apprach 2**
 
+|              |  Aircraft (actual) | Non-Aircraft (actual) |
+|--------------|--------------------|-----------------------|
+|   Aircraft (predicted)   |     11     |      0       |
+| Non-Aircraft (predicted) |     0      |      X       |
 
-|           |   Classes    |  Aircraft (actual) | Non-Aircraft (actual) |
-|-----------|--------------|--------------------|-----------------------|
-| Predicted |   Aircraft (predicted)   |     11     |      0       |
-|   Class   | Non-Aircraft (predicted) |     0      |      X       |
+|              |  Bird (actual) | Non-Bird (actual) |
+|--------------|--------------------|-----------------------|
+|   Bird (predicted)   |     3     |      1       |
+| Non-Bird (predicted) |     3      |      X       |
 
+|              |  Aircraft (actual) | Bird (actual) | non-aircraft & non-bird (actual) |
+|--------------|--------------------|-----------------------|--------------------------|
+|   Aircraft (predicted)   |     11     |      0       |      0       |
+| Bird (predicted) |     0      |      3       |      1       |
+| non-aircraft & non-bird (predicted) |     0      |      3       |      X       |
+
+|              |  Aircraft | Bird |
+|--------------|--------------------|-----------------------|
+|   Precision  |     1     |      0,75       |
+| Recall |     1      |      0,5       |
+
+**Apprach 1**
+
+|              |  Aircraft (actual) | Non-Aircraft (actual) |
+|--------------|--------------------|-----------------------|
+|   Aircraft (predicted)   |     7     |      8       |
+| Non-Aircraft (predicted) |     4      |      X       |
+
+|              |  Bird (actual) | Non-Bird (actual) |
+|--------------|--------------------|-----------------------|
+|   Bird (predicted)   |     3     |      4       |
+| Non-Bird (predicted) |     3      |      X       |
+
+|              |  Aircraft (actual) | Bird (actual) | non-aircraft & non-bird (actual) |
+|--------------|--------------------|-----------------------|--------------------------|
+|   Aircraft (predicted)   |     7     |      0       |      8       |
+| Bird (predicted) |     2      |      3       |      2       |
+| non-aircraft & non-bird (predicted) |     4      |      3       |      X       |
+
+|              |  Aircraft | Bird |
+|--------------|--------------------|-----------------------|
+|   Precision  |     0,47     |      0,43       |
+| Recall |     0,64      |      0,5       |
 
 Approach 2:
  - Aircraft
