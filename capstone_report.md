@@ -200,37 +200,36 @@ Data Preprocessing Steps are already largely described in the previous sections 
 __*Reference jupyter notebook:*__
 <p>"Capstone Part 02 - Apply SVM"
 
-__*Step 1:*__ Resize all the dataset images to the same resolution of 210x300 pixels (giving Aspect Ratio of 0.7)
-<p>__*Step 2:*__ Set all hyper-parameters for the feature extraction for the Histogram of Oriented Gradients (see section for Algorithms and Techniques to see the final values selected)
-<p>__*Step 3:*__ Loop over all dataset images to extract HOG features
-<p>__*Step 4:*__ Assign Label values to each dataset image
-<p>__*Step 5:*__ Split data into training and test dataset with test set being 10% of the overall dataset.
-<p>__*Step 6:*__ Pring out the output, accuracy
+__*Step 1:*__ Resize all the dataset images to the same resolution of 210x300 pixels (giving Aspect Ratio of 0.7)<p>
+__*Step 2:*__ Set all hyper-parameters for the feature extraction for the Histogram of Oriented Gradients (see section for Algorithms and Techniques to see the final values selected)<p>
+__*Step 3:*__ Loop over all dataset images to extract HOG features<p>
+__*Step 4:*__ Assign Label values to each dataset image<p>
+__*Step 5:*__ Split data into training and test dataset with test set being 10% of the overall dataset.<p>
+__*Step 6:*__ Pring out the output, accuracy<p>
 
 Optional Steps for manual qualitative check:
-<p>__*Step 7:*__ Design a sliding window functionality that will move windows at different scales and overlaps over larger images looking for smaller objects such as a small bird in a much bigger picture.
-<p>__*Step 8:*__ After running on test images the sliding windows and classifying each one of them into one of the 4 classes (aircraft, birds, sky, ground) create a heatmap for aircraft class and birds class for each test image.
-<p>__*Step 9:*__ Apply thresholds on heatmaps to cut down their values to lower the false alerts and unstabilities of the algorithm.
-<p>__*Step 10:*__ Design bounding boxes around the hotspots on the heatmaps of the aircraft and birds detections.
-<p>__*Step 11:*__ Print out the final test pictures with bounding boxes for aircraft and birds classes as well as their fixed heatmaps.
+__*Step 7:*__ Design a sliding window functionality that will move windows at different scales and overlaps over larger images looking for smaller objects such as a small bird in a much bigger picture.<p>
+__*Step 8:*__ After running on test images the sliding windows and classifying each one of them into one of the 4 classes (aircraft, birds, sky, ground) create a heatmap for aircraft class and birds class for each test image.<p>
+__*Step 9:*__ Apply thresholds on heatmaps to cut down their values to lower the false alerts and unstabilities of the algorithm.<p>
+__*Step 10:*__ Design bounding boxes around the hotspots on the heatmaps of the aircraft and birds detections.<p>
+__*Step 11:*__ Print out the final test pictures with bounding boxes for aircraft and birds classes as well as their fixed heatmaps.<p>
 
 **Approach 2: CNN based on AlexNet + Transfer Learning**
 
 __*Reference jupyter notebook:*__
 <p>"Capstone Part 03 - Apply CNN with Transfer Learning from AlexNet"
 
-__*Step 1:*__ Load the AlexNet pre-computed weights and assign them to the new networks variables
-<p>__*Step 2:*__ Create an actual AlexNet with the loaded and assign variables and save the network parameters
-<p>__*Step 3:*__ Add the transfer layer to AlexNet by creating fc8 - fully connected layer and save new network
-<p>__*Step 4:*__ Shuffle the dataset into training and validation where the ratio of validation to all is 0.3
-<p>__*Step 5:*__ Train the augmented AlexNet using GradientDescentOptimizer and batched dataset.
-<p>__*Step 6:*__ Estimate the intermediate accuracies for each 50 steps of the batched training process.
-<p>__*Step 7:*__ Run validation process and check the intermediates and the final accuracies of the predictions.
+__*Step 1:*__ Load the AlexNet pre-computed weights and assign them to the new networks variables<p>
+__*Step 2:*__ Create an actual AlexNet with the loaded and assign variables and save the network parameters<p>
+__*Step 3:*__ Add the transfer layer to AlexNet by creating fc8 - fully connected layer and save new network<p>
+__*Step 4:*__ Shuffle the dataset into training and validation where the ratio of validation to all is 0.3<p>
+__*Step 5:*__ Train the augmented AlexNet using GradientDescentOptimizer and batched dataset.<p>
+__*Step 6:*__ Estimate the intermediate accuracies for each 50 steps of the batched training process.<p>
+__*Step 7:*__ Run validation process and check the intermediates and the final accuracies of the predictions.<p>
 
-Additionally the same optional steps are now followed as in the Approach 1 (Steps 7 to Step 11) to allow for qualitative inspection on test images. See section above from Approach 1 to check the pipeline.
-
-<p>__*Step 12:*__ Design a full end-to-end pipeline for image processing and detection of aircraft and birds together with their bounding boxes.
-<p>__*Step 13:*__ Perform a check on a movie to see the detections in a potential real-life situation of aircraft and birds (potential hazards or obstacles) during the flight of an autonomous aircraft.
+Additionally the same optional steps are now followed as in the Approach 1 (Steps 7 to Step 11) to allow for qualitative inspection on test images. See section above from Approach 1 to check the pipeline.<p>
+__*Step 12:*__ Design a full end-to-end pipeline for image processing and detection of aircraft and birds together with their bounding boxes.<p>
+__*Step 13:*__ Perform a check on a movie to see the detections in a potential real-life situation of aircraft and birds (potential hazards or obstacles) during the flight of an autonomous aircraft.
 
 ### Implementation
 
