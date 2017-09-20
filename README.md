@@ -44,13 +44,21 @@ Sample of dataset images are available [here](https://github.com/Kamil-K/Machine
 
 ### Sample final results
 
-The models results - accuracies are:
+The models results on test images - accuracies are:
 - **Approach 1: 0.8805** for the Support Vector Machines based on Histogram of Orientation Gradients features
 - **Approach 2: 0.9916** for the Convolutional Neural Networks based on AlexNet and Transfer Learning from ImageNet dataset
 
 For approach 2 with CNN Transfer Learning based on AlexNet sample on test images of detection and classification as well as final precision and recall of aircraft and bird class are presented below.
 
- **Approach 2 - Transfer Learning applied on AlexNet CNN:**
+**Approach 2 - Transfer Learning applied on AlexNet CNN on New Images**
+ 
+**Confusion Matrix**
+ 
+ |              |  Aircraft (actual) | Bird (actual) | Non-Aircraft & Non-Bird (actual) |
+|--------------|--------------------|-----------------------|--------------------------|
+|   Aircraft (predicted)   |     11     |      0       |      0       |
+| Bird (predicted) |     0      |      3       |      1       |
+| Non-Aircraft & Non-Bird (predicted) |     0      |      3       |      X       |
  
  **Precision & Recall**
  
