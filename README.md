@@ -31,13 +31,13 @@ It is required for the Chapter 3 work for Transfer Learning to use pre-trained m
 ### Dataset:
 
 Dataset used for this project consists of pictures downloaded from the popular web search engine google in the section of images. It contains and is divided into four distinct classes of pictures:
-- aircraft pictures of Boeing 737 and Cessna 172 models in flight - 400 images
+- aircraft pictures of Boeing 737 and Cessna 172 models in flight - 400 images<p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/aircraft/0_.jpg "Aircraft")
-- birds pictures also in flight mostly on the background of sky - 367 images
+- birds pictures also in flight mostly on the background of sky - 367 images<p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/birds/0_.jpg "Bird")
-- sky images containing either a clear sky or clouded and ocluded sky images - 407 images
-- ground images containing a mix of various pictures from flight of cities, fields, mountains and other landscapes where most of the image area is covered by ground so that it does not contain a lot of sky in it - 407 images
+- sky images containing either a clear sky or clouded and ocluded sky images - 407 images<p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/sky/0_.jpg "Sky")
+- ground images containing a mix of various pictures from flight of cities, fields, mountains and other landscapes where most of the image area is covered by ground so that it does not contain a lot of sky in it - 407 images<p>
 ![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/dataset_examples/ground/0_.jpg "Ground")
 
 Sample of dataset images are available [here](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/tree/master/dataset_examples)
