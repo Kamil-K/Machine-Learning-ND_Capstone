@@ -270,9 +270,10 @@ Having performed additional qualitative analysis on the datasets of the internet
 
 **Apprach 2**
 
-|           |              |      Actual Class         |
+|           |              |      Actual|Class         |
+|-----------|--------------|------------|--------------|
 |           |   Classes    |  Aircraft  | Non-Aircraft |
-|:---------:|:------------:|:----------:|:------------:|
+|-----------|--------------|------------|--------------|
 | Predicted |   Aircraft   |     11     |      0       |
 |   Class   | Non-Aircraft |     0      |      X       |
 
