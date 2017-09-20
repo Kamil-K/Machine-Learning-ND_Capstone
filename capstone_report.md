@@ -108,12 +108,6 @@ Additionally the images are also down-sized so that they take significantly less
 **Step 3 - Renaming**
 For ease of grabbing the pictures later a renaming step is applied where the pictures are sorted and renamed numerically such as 1.jpg, 2.jpg etc.
 
-Examples of each class can be seen here:
-- aircraft
-- bird
-- sky
-- ground
-
 Note: All these processing steps are present in the jupyter notebook: "Capstone Part 01 - Dataset Preparation & Exploration.ipynb"
 
 Main observations about the dataset:
@@ -137,10 +131,14 @@ Main observations about the dataset:
 For the purposes of trully exploring the effects of Aspect Ratio conversion as described in the Step 1 of the Data Exploration chapter the visualisations are made representing the actual distribution of Aspect Ratios per each of the classes in the Dataset.
 
 Distribution of Aspect Ratios:
-- Pics_AR_aircraft.jpg
-- Pics_AR_birds.jpg
-- Pics_AR_sky.jpg
-- Pics_AR_ground.jpg
+- Aircraft Images Aspect Ratios <p>
+![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/Pics_AR_aircraft.jpg "Aircraft Images Aspect Ratios")
+- Bird Images Aspect Ratios <p>
+![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/Pics_AR_birds.jpg "Bird Images Aspect Ratios")
+- Sky Images Aspect Ratios <p>
+![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/Pics_AR_sky.jpg "Sky Images Aspect Ratios")
+- Ground Images Aspect Ratios <p>
+![alt tex](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/resources/Pics_AR_ground.jpg "Ground Images Aspect Ratios")
 
 Observations based on the exploratory visualisations of aspect ratios:
 - all classes ARs distributions resemble more or less the gaussian distribution shapes with some alternations regarding how skewed they are, the steepness, the omega etc. For all their peak is around 0.7 which is also indicated by their means.
