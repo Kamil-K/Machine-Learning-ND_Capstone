@@ -360,12 +360,7 @@ The final results indicate that the initial model with approach 1 underperforms 
 
 ### Free-Form Visualization
 
-The visualisations shown below show for model 1 and model 2 in the following order of columns:
-Column 1 - original test image
-Column 2 - aircraft detections bounding boxes
-Column 3 - aircraft detections heatmap - thresholded
-Column 4 - birds detections bounding boxes
-Column 5 - birds detections heatmap - thresholded
+The visualisations shown below show for model 1 and model 2.
 
  **Approach 1 - SVM based on HOG features:**
  
