@@ -181,7 +181,7 @@ __*Input Data handling:*__
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the CNN approach based on the AlexNet and transfer learning there is essentially a re-use of the pre-computed weights from AlexNet ImageNet competition. Additionally in order to make the network work the images need to be resized to the resolution on which AlexNet was trained which is 277x277 and with 3 color channels. 
 
 __*Default variables & hyper-parameters:*__
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default variables and hyper-parameters for CNN with AlexNet mainly concern the network itself. Here for the purposes of this work the AlexNet itself up until the 7th CNN layer was not altered. THis means that parameters for the network layers such as strides, padding, ksize, pooling, activation function are unchanged from the original architecture of the AlexNet. Only the final fully connected layer is added to account for new classes.
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default variables and hyper-parameters for CNN with AlexNet mainly concern the network itself. Here for the purposes of this work the AlexNet itself up until the 7th CNN layer was not altered. THis means that parameters for the network layers such as strides, padding, ksize, pooling, activation function are unchanged from the original architecture of the AlexNet. Only the final fully connected layer is added to account for new classes.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ome additional hyperparameters which were used in this work are settings in regards to the batches sizes selected for training and number of epochs. For the purpose of this work there are 10 epochs per batch selected and the batch size is 10.
 
 ### Benchmark
