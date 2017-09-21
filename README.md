@@ -14,15 +14,19 @@ This is a repository of a capstone project of Machine Learning NanoDegree from U
 
 Goal of the work is to detect and localize aircraft and birds in images or frames of a video that from aircraft point of view in the air so that potential hazards and obstacles in the air could be avoided.
 
+### Documentation
+
+Full detailed report is provided in the [capstone_report.md](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/capstone_report.md) available also in a [.pdf]](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/capstone_report.pdf) format.
+
 ### Design
 
 Code is written in Python using TensorFlow library for Machine Learning.
 
 It is divided into three chapters:
 
-- **Chapter 1:** Data pre-processing - [link](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/Capstone%20Part%2001%20-%20Dataset%20Preparation%20%26%20Exploration.ipynb)
-- **Chapter 2:** Approach 1 implementation based on Support Vector Machines and Histogram of Oriented Gradients - [link](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/Capstone%20Part%2002%20-%20Apply%20SVM.ipynb)
-- **Chapter 3:** Approach 2 implementation based on Transfer Learning from Convolutional Neural Network AlexNet - [link](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/Capstone%20Part%2003%20-%20Apply%20CNN%20with%20Transfer%20Learning%20from%20AlexNet.ipynb)
+- **Chapter 1:** Data pre-processing - [Capstone Part 01 - Dataset Preparation & Exploration.ipynb](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/Capstone%20Part%2001%20-%20Dataset%20Preparation%20%26%20Exploration.ipynb)
+- **Chapter 2:** Approach 1 implementation based on Support Vector Machines and Histogram of Oriented Gradients - [Capstone Part 02 - Apply SVM.ipynb](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/Capstone%20Part%2002%20-%20Apply%20SVM.ipynb)
+- **Chapter 3:** Approach 2 implementation based on Transfer Learning from Convolutional Neural Network AlexNet - [Capstone Part 03 - Apply CNN with Transfer Learning from AlexNet.ipynb](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/Capstone%20Part%2003%20-%20Apply%20CNN%20with%20Transfer%20Learning%20from%20AlexNet.ipynb)
 
 ### Pre-requisite files
 
