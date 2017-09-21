@@ -16,7 +16,7 @@ Goal of the work is to detect and localize aircraft and birds in images or frame
 
 ### Documentation
 
-Full detailed report is provided in the [capstone_report.md](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/capstone_report.md) available also in a [.pdf]](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/capstone_report.pdf) format.
+Full detailed report is provided in the [capstone_report.md](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/capstone_report.md) available also in a [.pdf](https://github.com/Kamil-K/Machine-Learning-ND_Capstone/blob/master/capstone_report.pdf) format.
 
 ### Design
 
